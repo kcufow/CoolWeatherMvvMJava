@@ -6,6 +6,7 @@ import com.ldw.coolweathermvvmjava.data.network.CoolWeatherNetwork;
 import com.ldw.coolweathermvvmjava.data.network.PlaceRepository;
 import com.ldw.coolweathermvvmjava.ui.MainViewModelFactory;
 import com.ldw.coolweathermvvmjava.ui.area.ChooseAreaModelFactory;
+import com.ldw.coolweathermvvmjava.ui.weather.WeatherModelFactory;
 
 /**
  * Created by ldw
@@ -27,6 +28,10 @@ public class InjectionUtil {
     public static ChooseAreaModelFactory getChooseAreaModelFactory(){
 
         return new ChooseAreaModelFactory(getPlaceRepository());
+    }
+    public static WeatherModelFactory getWeatherModelFactory(){
+
+        return new WeatherModelFactory(getWeatherRepository());
     }
 
 

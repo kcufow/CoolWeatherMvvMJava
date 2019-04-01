@@ -9,4 +9,5 @@ public class Constant {
     // 9da35b0a6b2c48498ed9e81b9d5206f3
     // 0099dcee07fd488e8b8866f16453fa2e
     public static final String KEY = "45dd25f63300445e967b461d2037e4f9";
+    public static final String WEATHER_ID = "weather_id";
 }

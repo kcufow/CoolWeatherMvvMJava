@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 
+import org.litepal.LitePal;
+
 
 public class WeatherApp extends Application {
 
@@ -13,6 +15,7 @@ public class WeatherApp extends Application {
     public void onCreate() {
         super.onCreate();
         mContext = this;
+        LitePal.initialize(this);
     }
 
     public static Context getContext(){

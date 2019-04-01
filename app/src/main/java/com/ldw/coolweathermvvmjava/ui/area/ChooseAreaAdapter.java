@@ -1,19 +1,19 @@
 package com.ldw.coolweathermvvmjava.ui.area;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import com.ldw.coolweathermvvmjava.DataBinderMapperImpl;
 import com.ldw.coolweathermvvmjava.databinding.SimpleItemBinding;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 
 /**
  * Created by ldw
@@ -36,13 +36,12 @@ public class ChooseAreaAdapter extends ArrayAdapter<String> {
         SimpleItemBinding bind;
         if (convertView==null){
             convertView= LayoutInflater.from(context).inflate(resId,parent,false);
-
              bind = SimpleItemBinding.bind(convertView);
             convertView.setTag(bind);
         }else {
             bind = (SimpleItemBinding) convertView.getTag();
         }
         bind.setData(datas.get(position));
-        return bind.getRoot();
+        return bind.simpleTextView;
     }
 }
