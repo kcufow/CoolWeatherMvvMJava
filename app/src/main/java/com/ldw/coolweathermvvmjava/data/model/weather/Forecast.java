@@ -11,11 +11,11 @@ public class Forecast {
     @SerializedName("cond")
     public More more;
 
-    private static class Temperature {
+    public static class Temperature {
         public String max;
         public String min;
     }
-    private static class More{
+    public static class More{
         @SerializedName("txt_d")
         public String info;
     }

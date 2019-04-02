@@ -10,15 +10,15 @@ public class Suggestion {
     public CarWash carWash;
     public Sport sport;
 
-    private static class Comfort{
+    public static class Comfort{
         @SerializedName("txt")
         public String info;
     }
-    private static class CarWash{
+    public static class CarWash{
         @SerializedName("txt")
         public String info;
     }
-    private static class Sport{
+    public static class Sport{
         @SerializedName("txt")
         public String info;
     }

@@ -3,6 +3,7 @@ package com.ldw.coolweathermvvmjava.data.network;
 import com.ldw.coolweathermvvmjava.data.model.place.City;
 import com.ldw.coolweathermvvmjava.data.model.place.County;
 import com.ldw.coolweathermvvmjava.data.model.place.Province;
+import com.ldw.coolweathermvvmjava.data.model.weather.HeWeather;
 import com.ldw.coolweathermvvmjava.data.network.api.PlaceService;
 import com.ldw.coolweathermvvmjava.data.network.api.WeatherService;
 
@@ -52,6 +53,16 @@ public class CoolWeatherNetwork {
 
         countyListCall.enqueue(callback);
 
+
+    }
+    public void fetchWeatherData(String weatherId, String key,Callback<HeWeather> callback){
+        Call<HeWeather> weatherCall = weatherService.getWeather(weatherId, key);
+        weatherCall.enqueue(callback);
+
+    }
+    public void fetchBingPicData(Callback<String> callback){
+        Call<String> bingPic = weatherService.getBingPic();
+        bingPic.enqueue(callback);
 
     }
 

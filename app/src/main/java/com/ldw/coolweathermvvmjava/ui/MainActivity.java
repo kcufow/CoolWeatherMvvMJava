@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             if (viewModel.isWeatherCached()){
                 Intent intent = new Intent(this, WeatherActivity.class);
                 startActivity(intent);
+                finish();
             }else {
 
                 FragmentManager fragmentManager = getSupportFragmentManager();

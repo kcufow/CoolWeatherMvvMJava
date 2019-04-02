@@ -21,6 +21,7 @@
             />
 
         <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawerLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -38,6 +39,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+                        <include layout="@layout/title" bind:weather="@{viewModel.weather}"/>
+                        <include layout="@layout/now" bind:weather="@{viewModel.weather}"/>
+                        <include layout="@layout/forecast" bind:weather="@{viewModel.weather}"/>
+                        <include layout="@layout/aqi" bind:weather="@{viewModel.weather}"/>
+                        <include layout="@layout/suggestion" bind:weather="@{viewModel.weather}"/>
 
                     </LinearLayout>
                 </ScrollView>

@@ -16,7 +16,7 @@ public class Now {
         return null;
     }
 
-    private static class More{
+    public static class More{
         @SerializedName("txt")
         public String info;
     }
